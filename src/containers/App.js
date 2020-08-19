@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import styled from "styled-components";
 import DataDetails from "../Components/DataDetails";
 //import PageDetails from "../components/PageDetails";
-import { fetchArticleDetails } from "../actions";
+import { ADD_ARTICLE } from "../actions";
 import { Container, Row, Col } from 'reactstrap';
 import ModalForm from '../Components/Modals/Modal';
 import DataTable from '../Components/Tables/DataTable';
@@ -33,7 +33,7 @@ class App extends Component {
   }
 
   getItems(){
-    fetch('http://localhost:81/crud')
+    fetch(ADD_ARTICLE)
       .then(response => response.json())
       .then(items => this.setState({items}))
       .catch(err => console.log(err))

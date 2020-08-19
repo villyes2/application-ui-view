@@ -1,4 +1,5 @@
 import React from 'react';
+import { ADD_ARTICLE } from "../../actions";
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 class AddEditForm extends React.Component {
@@ -18,7 +19,7 @@ class AddEditForm extends React.Component {
 
   submitFormAdd = e => {
     e.preventDefault()
-    fetch('http://localhost:81/crud', {
+    fetch(ADD_ARTICLE, {
       method: 'post',
       headers: {
         'Content-Type': 'application/json'
@@ -46,7 +47,7 @@ class AddEditForm extends React.Component {
 
   submitFormEdit = e => {
     e.preventDefault()
-    fetch('http://localhost:81/crud', {
+    fetch(ADD_ARTICLE, {
       method: 'put',
       headers: {
         'Content-Type': 'application/json'

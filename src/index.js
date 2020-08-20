@@ -13,7 +13,7 @@ ReactDOM.render(
     
 	    <Router>
       <Route path="/" component={App} />      
-	   <Route path="/pagedetails/:id" component={PageDetailsd} />
+	
     </Router>
   </Provider>,
   document.getElementById("root")
